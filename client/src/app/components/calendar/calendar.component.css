@@ -1,0 +1,93 @@
+.container-calendar{
+  margin-top:40px;
+  }
+
+  .img-calendar {
+  width: 55px;
+  height: 55px;
+}
+
+.text-calendar {
+  font-size: 18px;
+}
+
+.cont-calendar {
+  font-weight: bold;
+  border-bottom:1px solid #FF0000;
+}
+
+.marker-local, .marker-visit {
+  margin-top: 17px;
+}
+
+.date-cal{
+  background-color:red;
+  font-size: 20px;
+}
+
+.venue-cal{
+  font-size: 18px;
+}
+.title-jornada{
+  font-weight: bold;
+  font-size: 23px;
+}
+@media(min-width:300px) and (max-width: 425px) {
+  .img-calendar {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .text-calendar {
+    font-size: 13px;
+  }
+
+  .marker-visit {
+    margin-left: 10px;
+  }
+
+  .img-visit {
+    margin-left: -12px;
+  }
+
+  .cont-local, .cont-visit {
+    margin-top: 5px;
+  }
+.cont-calendar {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+}
+
+@media(min-width:375px) and (max-width: 425px) {
+  .marker-visit {
+    margin-left: 10px !important;
+  }
+
+  .img-visit {
+    margin-left: 5px !important;
+  }
+}
+
+@media (min-width:426px) {
+  .marker-local, .marker-visit {
+    font-size: 28px !important;
+    margin-top: 10px;
+  }
+  .cont-calendar {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up) */
+@media(min-width:426px) and (max-width: 767px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/*Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

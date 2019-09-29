@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */
+
+/***************************GENERALES********************************/
+#content {
+  background: white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #A5A5A5 ;
+  width: 100%;
+}
+
+.banner {
+  background-image: url('/assets/img/banners/320x50.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90px;
+  width: 100%;
+}
+@media(min-width:300px) and (max-width: 425px) {
+  .banner {
+    background-image: url('/assets/img/banners/320x50.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 100%;
+  }
+}
+
+@media (min-width:426px) {
+  .banner {
+    background-image: url('/assets/img/banners/468x60.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+}
+
+
+/*Small devices (landscape phones, 576px and up) */
+
+@media(min-width:426px) and (max-width: 767px) {
+  .banner {
+    background-image: url('/assets/img/banners/450x60.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+    width: 100%;
+  }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+  .banner {
+    background-image: url('/assets/img/banners/720x90.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 100%;
+  }
+
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+  .banner {
+    background-image: url('/assets/img/banners/970x90.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 100%;
+    /*background-size: 100% 100%;*/
+  }
+}
+
+
+/*Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+  .banner {
+    background-image: url('/assets/img/banners/970x90.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  html{
+    height:100% !important;
+  }
+  body{
+    height:100% !important;
+  }
+
+}
+h1-strong{
+  font-size: 35px;
+  font-weight: bold;
+  margin-left:13px;
+}
+/*************************************custom styles*************************************************************/
+.btn-custom{
+  margin-top: 15px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

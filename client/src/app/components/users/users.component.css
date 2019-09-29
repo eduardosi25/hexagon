@@ -1,0 +1,13 @@
+.nickname{
+  color: gray;
+}
+.user-name >p{
+  margin-left: 15px;
+}
+.pagination{
+margin-top: 10px; 
+}
+div.image-user.pull-left > a > img{
+  width:89px;
+  height:88px;
+}

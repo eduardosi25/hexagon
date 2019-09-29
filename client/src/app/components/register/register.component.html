@@ -1,0 +1,60 @@
+<div class="offset-xl-4 offset-0 offset-md-2 offset-lg-3 col-xl-4 col-lg-6 col-md-8 col-sm-4 col-12">
+<div class="title-register text-center">
+  <h2 class="h1-strong">{{title}}</h2>
+</div>
+<div class="title-register2 text-center"> </div>
+<div class="alert alert-success" *ngIf="status == 'success'">
+  Registro completado correctamente, <a [routerLink]="['/login']">Identificate aqui</a>
+</div>
+<div class="alert alert-danger" *ngIf="status == 'error'">
+  El registro no ha podido completarse, intentalo de nuevo, quizá tu email o nickname ya esta en uso, intenta de nuevo con otros datos.
+</div>
+
+<form class="content-register" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" >
+  <p>
+    <label>Nombre</label>
+    <input type="text" name="name" #name="ngModel" [(ngModel)] ="user.name" class="form-control" required/>
+    <span *ngIf="!name.valid && name.touched"> El nombre es obligatorio</span>
+  </p>
+
+  <p>
+    <label>Apellidos</label>
+    <input type="text" name="surname" #surname="ngModel" [(ngModel)] ="user.surname" class="form-control" required/>
+    <span *ngIf="!surname.valid && surname.touched">Los apellidos son obligatorios</span>
+  </p>
+
+  <p>
+    <label>Nick</label>
+    <input type="text" name="nick" #nick="ngModel" [(ngModel)] ="user.nick" class="form-control" required/>
+    <span *ngIf="!nick.valid && nick.touched"> El apodo es obligatorio</span>
+  </p>
+
+  <p>
+    <label>Email</label>
+    <input type="text" name="email" #email="ngModel" [(ngModel)] ="user.email" class="form-control" required pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"/>
+    <span *ngIf="!email.valid && email.touched"> El correo no es correcto</span>
+  </p>
+
+  <p>
+    <label>Password</label>
+    <input type="password" name="password" #password="ngModel" [(ngModel)] ="user.password" class="form-control" required/>
+    <span *ngIf="!password.valid && password.touched">El password es obligatorio</span>
+  </p>
+  <div class="btn-custom">
+    <a><button type="submit" class="btn btn-outline-ases btn-md" [disabled] = "!registerForm.form.valid">CONTINUAR</button></a>
+  </div>
+
+</form>
+<div class="cont-fb-button col-xl-12 col-md-12 text-center">
+  <div class="cont-fb-button col-xl-12 col-md-12 text-center">
+    <button class="loginBtn loginBtn--facebook" (click)="socialSignIn('facebook')">Registrate con Facebook </button>
+  </div>
+  <div class="col-xl-12 col-md-12 text-center">
+    <button class="loginBtn loginBtn--google" (click)="socialSignIn('google')">Registrate con Google</button>
+  </div>
+
+<div class="col-xl-12 col-md-12 text-center">
+  <div class="label-register"><a [routerLink]="['/login']">Ya tengo cuenta</a></div>
+</div>
+
+</div>

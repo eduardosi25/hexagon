@@ -1,0 +1,53 @@
+<div class="offset-xl-4 offset-0 offset-md-2 offset-lg-3 col-xl-4 col-lg-6 col-md-8 col-sm-4 col-12">
+  <div class="text-center">
+      <h2 class="title-login h1-strong">{{title}}</h2>
+  </div>
+
+  <div class="alert alert-success" *ngIf="status == 'success'">
+    El login es correcto.
+  </div>
+
+  <div class="alert alert-danger" *ngIf="status == 'error'">
+    No has podido identificarte correctamente.
+  </div>
+
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-12">
+    <p>
+      <label>Correo Electrónico</label>
+      <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" />
+      <span *ngIf="!email.valid && email.touched">El email no es correcto</span>
+    </p>
+    <p>
+      <label>Contraseña</label>
+      <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required />
+      <span *ngIf="!password.valid && password.touched">La contraseña es obligatoria</span>
+    </p>
+    <div class="btn-custom">
+      <a><button type="submit" class="btn btn-outline-ases btn-md" [disabled] = "!loginForm.form.valid">CONTINUAR</button></a>
+    </div>
+  </form>
+  <div class="cont-fb-button col-xl-12 col-md-12 text-center">
+    <button class="loginBtn loginBtn--facebook" (click)="socialSignIn('facebook')">Ingresa con Facebook </button>
+  </div>
+
+
+
+  <div class="cont-google-button col-xl-12 col-md-12 text-center">
+    <button class="loginBtn loginBtn--google" (click)="socialSignIn('google')">Ingresa con Google</button>
+  </div>
+  
+  <div *ngIf="display" class="list-group">
+    <h3>Mi full name : {{name}}</h3>
+    <h4>email : {{email2}}</h4>
+    <h4>token : {{token}}</h4>
+    <img src="{{image}}" alt="" style="width:100px; height:100px;">
+  </div>
+
+  <div class="col-xl-12 col-md-12 text-center">
+    <div class="label-register"><a [routerLink]="['/register']">Registrarme</a></div>
+  </div>
+
+
+
+
+</div>

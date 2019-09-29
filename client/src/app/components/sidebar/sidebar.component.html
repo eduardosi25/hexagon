@@ -1,0 +1,179 @@
+<!-------------------Modal here because z-index don't work on position relative and absolute layer after wrapper  -------------------------------------->
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header" style="background-color:red; color: white;">
+                <div class="text-center offset-1 col-10">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">El Camino S.A de C.V</h5>
+                </div>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <div class="label-invite text-center offset-2 col-8">INVITA A TUS AMIGOS</div>
+                <div class="invite-text offset-3 col-6 text-center">Por enviar 5 recomendaciones recibirás 100 votos y cada que alguien se registre, conseguirás otros 100 votos.</div>
+                <div class="offset-3 col-6 text-center"><button class="btn btn-danger-custom big-custom btn-lg" type="button">Compartir Enlace</button></div>
+
+                <div class="social-recommend row text-center">
+                    <div class="offset-4 col-2">
+                        <a href="#"><img src="../assets/img/twitter.png" alt=""></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#"><img src="../assets/img/facebook.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+        <div class="container-sidebar">
+
+            <!-- Sidebar Header -->
+            <div class="sidebar-header">
+                <div class="container-logo-red">
+                    <a [routerLink]="['/home']"><img src="../assets/img/imagotipo_horizontal.png" alt=""></a>
+                </div>
+            </div>
+
+            <ul class="list-unstyled components navs">
+
+                <li class="home navbars-nav navs-link">
+                    <a [routerLink]="['/home']">
+                        <span><i class="material-icons">home</i></span> Home</a>
+                </li>
+                <li class="recommend navbars-nav navs-link">
+                    <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> <span><i class="material-icons">
+                            whatshot
+                            </i></span> El camino S.A de C.V</a>
+                </li>
+                <li class="navbars-nav navs-link ">
+                    <a [routerLink]="['/register']" *ngIf="!identity"> <span><i class="material-icons">
+                        fingerprint
+                        </i></span> Registrarse</a>
+                </li>
+                <li class="navbars-nav navs-link">
+                    <a [routerLink]="['/login']" *ngIf="!identity"> <span><i class="material-icons">
+                        perm_identity
+                        </i></span> Login</a>
+                </li>
+                <li class="navbars-nav navs-link" *ngIf="identity">
+                    <a [routerLink]="['/usuarios']"> <span><i class="material-icons">
+                        supervised_user_circle
+                        </i></span> Usuarios</a>
+                </li>
+                <li class="navbars-nav navs-link" *ngIf="identity">
+                    <a [routerLink]="['#']"> <span><i class="material-icons">
+                        list
+                        </i></span> Listado de segmentos</a>
+                </li>
+                <li class="navbars-nav navs-link" *ngIf="identity">
+                    <a [routerLink]="['#']"> <span><i class="material-icons">
+                        fiber_new
+                        </i></span> Nuevo Tag</a>
+                </li>
+                <li class="navbars-nav navs-link" *ngIf="identity">
+                    <a [routerLink]="['#']"> <span><i class="material-icons">
+                        settings_applications
+                        </i></span> Configurar Destino</a>
+                </li>
+                <li class="faqs navbars-nav navs-link">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle"> <span><i class="material-icons">
+                        help
+                        </i></span> Ayuda</a>
+                    <!--    show a class para mostrar por default  -->
+                    <ul class="list-unstyled collapse navbars-nav navs-link" id="pageSubmenu">
+                        <li><a href="#">¿Quienes somos?</a></li>
+                        <li><a href="#">¿Como creo un segmento?</a></li>
+                        <li><a href="#">¿Que son y para que sirven los segmentos?</a></li>
+                    </ul>
+                </li>
+                <li class="navbars-nav navs-link item-close-sesion" *ngIf="identity"><a class="pointer" (click)="logout()" [routerLink]="['/login']">Cerrar sesión</a></li>
+            </ul>
+
+
+        </div>
+    </nav>
+
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid" style="text-align:center;">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                <ul class="logo-principal nav navbar-nav center-block">
+                    <!--- muestra menu sin logueo      --->
+
+                    <div class="container-profile " *ngIf="!identity">
+
+                        <div class="imageUser col-xs-4 float-left">
+                            <img src="../assets/img/sprite-Blancos_0013_Objeto-inteligente-vectorial.png" alt="">
+                        </div>
+                    </div>
+                    <!--- muestra menu con logueo      --->
+
+                    <div class="container-profile" *ngIf="identity">
+
+                        <div class="float-left">
+                            <a [routerLink]="['/mis-datos']">
+                                <img class="image-user rounded-circle img-thumbnail img-fluid float-left" src="{{url + 'get-image-user/' + identity.image}}" *ngIf="identity && identity.image">
+                                <img class="image-user rounded-circle img-thumbnail img-fluid float-left" src="../../assets/img/sprite-Blancos_0013_Objeto-inteligente-vectorial.png" *ngIf="!identity && !identity.image">
+                                <img class="rounded-circle img-thumbnail img-fluid " src="../../assets/img/sprite-Blancos_0013_Objeto-inteligente-vectorial.png" alt="" *ngIf="identity && !identity.image">
+                            </a>
+                        </div>
+                        <div class="float-right">
+                            <div class="col-xs-12 profile-text"> Nombre </div>
+                            <div class="profile-name"><a [routerLink]="['/mis-datos']">{{identity.name}} {{identity.surname}}</a></div>
+
+                        </div>
+                    </div>
+                </ul>
+
+                <!--*****************************botones derechos de menú **********************************************
+
+
+                         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <svg class="svg-inline--fa fa-align-justify fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="align-justify" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 84V44c0-8.837 7.163-16 16-16h416c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16zm16 144h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0-128h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <i class="fas fa-align-justify"></i> -->
+            </div>
+        </nav>
+        <div class="container-content">
+            <!-- here start the magic -->
+            <router-outlet></router-outlet>
+            <!-- Dark Overlay element -->
+            <div class="overlay"></div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,429 @@
+#content {
+    background: linear-gradient(#342323, #fe0000);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    width: 100%;
+}
+
+.content-blur {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to right, white 3%, #a57171 8%);
+    opacity: .5;
+    /*z-index: 0;*/
+}
+
+.text-help {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px !important;
+    font-weight: bold;
+}
+
+.discover {
+    text-decoration: underline;
+}
+
+.img-thumbnail {
+    background: transparent;
+    background-color: rgba(253, 228, 228, 0.4);
+    border: 6px solid rgba(0, 0, 0, 0.1);
+}
+
+#centrador {
+    /*  position: relative; */
+    width: 200px;
+    height: auto;
+}
+
+#imagen {
+    /*  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;*/
+    width: 130px;
+    height: 130px;
+}
+
+.image-vs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 46px !important;
+    height: 46px !important;
+}
+
+.content-live {
+    margin-bottom: 40px;
+}
+
+.text-local {
+    float: right;
+    padding-right: 35px !important;
+}
+
+.text-visit {
+    padding-left: 40px;
+}
+
+.btn-outline-ases {
+    color: #91D2DF;
+    background-color: transparent;
+    background-image: none;
+    border-color: #91D2DF;
+    border-style: solid;
+    border-width: medium;
+}
+
+.btn-outline-ases:hover {
+    color: white;
+    background-color: #91D2DF;
+    border-color: #91D2DF;
+}
+
+.btn-outline-ases:not(:disabled):not(.disabled).active,
+.btn-outline-ases:not(:disabled):not(.disabled):active,
+.show>.btn-outline-ases.dropdown-toggle {
+    color: white;
+    background-color: #91D2DF;
+    border-color: #91D2DF;
+}
+
+outline-ases:not(:disabled):not(.disabled):active:focus,
+.show>.btn-outline-ases.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(37, 201, 245, .5);
+}
+
+.btn-md {
+    border-radius: 20px;
+    width: 181px;
+    margin: 0 auto;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.btn-outline-ases:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(129, 186, 197, .5);
+    background-color: rgb(129, 186, 197);
+    color: white;
+}
+
+.big-text {
+    font-size: 4rem !important;
+    line-height: normal;
+}
+
+.container-big-text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container-medium-text {
+    text-align: center;
+    margin-top: -2px;
+    font-size: 1.2rem !important
+}
+
+.cancha {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.big-custom {
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    background-color: #004C98 !important;
+}
+
+.btn-dark {
+    background-color: black !important;
+}
+
+.btn-secondary {
+    background-color: #939393;
+}
+
+.btn-danger-custom {
+    background-color: #FE0000;
+    border-color: #FE0000;
+    color: white;
+}
+
+
+/****************************** ranking *********************************/
+
+#first-child {
+    border-top: 1px solid white !important;
+}
+
+.container-place {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.pos-ranking {
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+.img-ranking {
+    width: 80px;
+    height: 80px;
+}
+
+.team-ranking {
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+.vote-ranking {
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+
+/***************************** players circles *****************************/
+
+.container-players {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.img-first,
+.img-fifth {
+    height: 95px;
+}
+
+.img-sec,
+.img-fourth {
+    height: 124px;
+}
+
+.img-first {
+    right: -15px
+}
+
+.img-sec {
+    right: -15px
+}
+
+.img-third {
+    height: 161px;
+}
+
+.img-fourth {
+    left: -15px
+}
+
+.img-fifth {
+    left: -15px
+}
+
+.row {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.row-text {
+    margin: 6px;
+}
+
+.title-winner {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.text-winner {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.title-segment {
+    color: purple;
+}
+
+@media(width: 320px) {
+    /**************fix equipos/****************/
+    #imagen {
+        height: 114px !important;
+        width: 130px !important;
+    }
+    .img-ranking {
+        width: 60px;
+        height: 60px;
+    }
+    .team-ranking {
+        padding-left: 4px;
+        font-size: 16px;
+    }
+}
+
+
+/*******************************Banners in all portal************************************************/
+
+@media(min-width:300px) and (max-width: 425px) {
+    .left-detail-player {
+        margin-top: -45px;
+        margin-left: -25px;
+    }
+    .right-detail-player {
+        margin-top: -45px;
+        margin-left: 25px;
+    }
+    .img-first {
+        display: none !important;
+    }
+    .img-third {
+        height: 120px;
+    }
+    .img-sec,
+    .img-fourth {
+        height: 80px;
+    }
+    .img-fifth {
+        display: none !important;
+    }
+    .big-text {
+        font-size: 2rem !important;
+        line-height: normal;
+    }
+    #imagen {
+        height: 130px;
+        width: 130px;
+    }
+    #image {
+        height: 46px;
+        width: 46px;
+        margin-left: 68px !important;
+        margin-top: -64px !important;
+    }
+    #content>nav>div>ul>a>li>img {
+        width: 80%;
+        height: 50px;
+    }
+    #sidebarCollapse {
+        width: 60px;
+        height: 40px;
+    }
+    .nav-item>img {
+        width: 100%;
+    }
+    .content-live {
+        margin-bottom: 20px;
+    }
+    .pic-winner {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width:426px) {}
+
+
+/*Small devices (landscape phones, 576px and up) */
+
+@media(min-width:426px) and (max-width: 767px) {
+    #imagen {
+        width: 173px;
+        height: 173px;
+    }
+    #image {
+        height: 56px !important;
+        width: 61px !important;
+        margin-left: 99px !important;
+        margin-top: -88px !important;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    #imagen {
+        width: 173px;
+        height: 173px;
+    }
+    #image {
+        height: 56px;
+        width: 61px;
+        margin-left: 99px !important;
+        margin-top: -88px !important;
+    }
+    .pos-ranking {
+        vertical-align: bottom;
+        font-size: 45px !important;
+    }
+    .img-ranking {
+        width: 126px !important;
+        height: 126px !important;
+    }
+    .team-ranking {
+        padding-left: 20px;
+        font-size: 32px !important;
+    }
+    .vote-ranking {
+        padding-left: 20px;
+        font-size: 25px !important;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    #imagen {
+        width: 173px;
+        height: 173px;
+    }
+    #image {
+        height: 56px;
+        width: 61px;
+        margin-left: 99px !important;
+        margin-top: -88px !important;
+    }
+}
+
+
+/*Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    #imagen {
+        width: 173px;
+        height: 173px;
+    }
+    #image {
+        height: 56px;
+        width: 61px;
+        margin-left: -61px !important;
+        margin-top: 117px !important;
+    }
+}
+
+div.text-center.cancha.img-fluid.col-12>img {
+    width: 62% !important;
+}
+
+div:nth-child(1)>span:nth-child(1)>i {
+    color: red;
+}
