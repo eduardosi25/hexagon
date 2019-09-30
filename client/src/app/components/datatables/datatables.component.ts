@@ -1,20 +1,20 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import 'datatables.net';
-/** Declaramos jquery para poder usarlo en el componente*/
-declare var $: any;
 
+
+declare var $: any;
 @Component({
   selector: 'app-datatables',
   templateUrl: 'datatables.component.html'
 })
-export class DataTablesComponent implements OnInit {
-@ViewChild('dataTable') table;
-dataTable : any;
-dtOptions:any;
-constructor(){}
-
-  ngOnInit():void {
-    this.dataTable = $(this.table.nativeElement);
-    this.dataTable.dataTable();
-  }
+export class DataTablesComponent {
+  rows = [
+    { name: 'Austin', gender: 'Male', company: 'Swimlane' },
+    { name: 'Dany', gender: 'Male', company: 'KFC' },
+    { name: 'Molly', gender: 'Female', company: 'Burger King' },
+  ];
+  columns = [
+    { prop: 'name' },
+    { name: 'Gender' },
+    { name: 'Company' }
+  ];
 }
