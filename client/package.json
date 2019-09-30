@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "cd app && npm run build",
-    "postinstall": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "npm --prefix client install",
+    "build": "npm --prefix client run build",
+    "start": "node index.js"
 
   },
   "private": true,
