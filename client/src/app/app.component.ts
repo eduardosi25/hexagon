@@ -21,7 +21,7 @@ constructor(
   private _userService:UserService
 
 ){
-  this.title = 'ASES';
+  this.title = 'hexagon';
 }
 
 ngOnInit() {
