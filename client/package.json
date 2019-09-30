@@ -8,7 +8,7 @@
     "e2e": "ng e2e",
     "postinstall": "ng build",
     "build": "npm run build",
-    "start": "node serve.js"
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
