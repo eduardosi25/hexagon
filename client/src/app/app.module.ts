@@ -6,7 +6,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { DataTablesModule } from 'angular-datatables';
+
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 //Componentes
 import { AppComponent } from './app.component';
@@ -66,7 +66,7 @@ export function getAuthServiceConfigs() {
     HttpClientModule,
     AngularFontAwesomeModule,
     SocialLoginModule,
-    DataTablesModule,
+    
     NgxDatatableModule,
 
 
