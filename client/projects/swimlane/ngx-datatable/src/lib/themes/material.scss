@@ -203,8 +203,9 @@ $datatable-summary-row-background-hover: #ddd !default;
       background-color: $datatable-header-cell-background;
       color: $datatable-header-cell-color;
       vertical-align: bottom;
-      font-size: 12px;
+      font-size: 18px;
       font-weight: 500;
+      font-weight:bold;
 
       .datatable-header-cell-wrapper {
         position: relative;

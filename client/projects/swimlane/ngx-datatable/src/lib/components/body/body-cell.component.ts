@@ -26,8 +26,8 @@ export type TreeStatus = 'collapsed' | 'expanded' | 'loading' | 'disabled';
   selector: 'datatable-body-cell',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="datatable-body-cell-label" [style.margin-left.px]="calcLeftMargin(column, row)">
-      <label
+  <div class="datatable-body-cell-label" [style.margin-left.px]="calcLeftMargin(column, row)">
+      datatable-body-cell-label<label
         *ngIf="column.checkboxable && (!displayCheck || displayCheck(row, column, value))"
         class="datatable-checkbox"
       >

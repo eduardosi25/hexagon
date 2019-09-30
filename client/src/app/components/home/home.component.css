@@ -424,6 +424,3 @@ div.text-center.cancha.img-fluid.col-12>img {
     width: 62% !important;
 }
 
-div:nth-child(1)>span:nth-child(1)>i {
-    color: red;
-}

@@ -1,6 +1,39 @@
 <div>
-    <ngx-datatable class="material"
-      [rows]="rows"
-      [columns]="columns">
-    </ngx-datatable>
-  </div>
+  <h3>
+  Favoritos
+   
+  </h3>
+  <div class="text-right"><input 
+    type="text"
+    style="padding:8px;margin:15px auto;width:30%;"
+    placeholder="Buscar por nombre.."
+    (keyup)="updateFilter($event)"
+  /></div>
+  
+  <ngx-datatable
+    #table
+    class="material"
+    [columns]="columns"
+    [columnMode]="ColumnMode.force"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [limit]="3"
+    [rows]="rows"
+  >
+  </ngx-datatable>
+</div>
+<div style="margin-top:150px;">
+  <ngx-datatable
+    #table
+    class="material"
+    [columns]="columns"
+    [columnMode]="ColumnMode.force"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [limit]="10"
+    [rows]="rows"
+  >
+  </ngx-datatable>
+</div>

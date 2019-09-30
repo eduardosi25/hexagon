@@ -3,19 +3,22 @@
     "name": "Ethel Price",
     "gender": "female",
     "company": "Johnson, Johnson and Partners, LLC CMP DDC",
-    "age": 22
+    "age": 22,
+    "status":"completado"
   },
   {
     "name": "Claudine Neal",
     "gender": "female",
     "company": "Sealoud",
-    "age": 55
+    "age": 55,
+    "status":"completado"
   },
   {
     "name": "Beryl Rice",
     "gender": "female",
     "company": "Velity",
-    "age": 67
+    "age": 67,
+    "status":"completado"
   },
   {
     "name": "Wilder Gonzales",
@@ -25,7 +28,8 @@
   {
     "name": "Georgina Schultz",
     "gender": "female",
-    "company": "Suretech"
+    "company": "Suretech",
+    "status":"completado"
   },
   {
     "name": "Carroll Buchanan",

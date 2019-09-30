@@ -4,46 +4,15 @@ import { ColumnMode } from 'projects/swimlane/ngx-datatable/src/public-api';
 
 @Component({
   selector: 'app-datatables',
-  template: `
-    <div>
-      <h3>
-        Client-side Search and Filtering
-        <small>
-          <a
-            href="https://github.com/swimlane/ngx-datatable/blob/master/src/app/basic/filter.component.ts"
-            target="_blank"
-          >
-            Source
-          </a>
-        </small>
-      </h3>
-      <input
-        type="text"
-        style="padding:8px;margin:15px auto;width:30%;"
-        placeholder="Type to filter the name column..."
-        (keyup)="updateFilter($event)"
-      />
-      <ngx-datatable
-        #table
-        class="material"
-        [columns]="columns"
-        [columnMode]="ColumnMode.force"
-        [headerHeight]="50"
-        [footerHeight]="50"
-        rowHeight="auto"
-        [limit]="10"
-        [rows]="rows"
-      >
-      </ngx-datatable>
-    </div>
-  `
+  templateUrl: 'datatables.component.html',
+  styleUrls: ['./datatables.component.css'],
 })
 export class DataTablesComponent {
   rows = [];
 
   temp = [];
 
-  columns = [{ prop: 'name' }, { name: 'Company' }, { name: 'Gender' }];
+  columns = [{ prop: 'name' }, { name: 'Company' }, { name: 'Gender' }, { name: 'status' }];
   @ViewChild(DatatableComponent, { static: false }) table: DatatableComponent;
 
   ColumnMode = ColumnMode;
