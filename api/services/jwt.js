@@ -2,7 +2,7 @@
 var jwt = require("jwt-simple");
 var moment = require ("moment");
 //var momentTimezone = require("moment-timezone");
-var secret = 'ases_del_futbol';
+var secret = 'hexagonData';
 
 exports.createToken = function(user){
     var payload = {

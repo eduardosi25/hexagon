@@ -13,7 +13,7 @@ import { UsersComponent } from './components/users/users.component';
 import { DataTablesComponent } from './components/datatables/datatables.component';
 
 const APP_ROUTES: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent },

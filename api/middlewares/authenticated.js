@@ -1,7 +1,7 @@
 'use strict'
 var jwt = require('jwt-simple');
 var moment = require('moment');
-var secret = 'ases_del_futbol';
+var secret = 'hexagonData';
 
 exports.ensureAuth = function(req, res, next){
   if (!req.headers.authorization){
